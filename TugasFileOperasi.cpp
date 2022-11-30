@@ -6,6 +6,9 @@ using namespace std;
 /* ACHMAD RIZKY - 50421023
 LUSSY TRIANA 	- 50421757
 MUHAMMAD RIDWAN - 51421057 */
+/* ACHMAD RIZKY - 50421023
+LUSSY TRIANA 	- 50421757
+MUHAMMAD RIDWAN - 51421057 */
 
 /* fungsi ini nantinya akan dipanggil ketika user menginput nilai berupa 1, fungsi ini berguna untuk
 membuat dan menulis data file */
