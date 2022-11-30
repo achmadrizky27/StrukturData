@@ -197,7 +197,6 @@ void menghapusfile(){
 	}
 }
 
-
 int main() {
     int pilihan;
     cout << "\nRIZKY - LUSSY - RIDWAN = 2IA25 - STRUKTURDATA"<<endl;
