@@ -3,11 +3,14 @@
 #include <cstring>
 #include <fstream>
 using namespace std;
-//ACHMAD RIZKY - 50421023
-//LUSSY TRIANA - 50421757
-//MUHAMMAD RIDWAN - 51421057
+/* ACHMAD RIZKY - 50421023
+LUSSY TRIANA 	- 50421757
+MUHAMMAD RIDWAN - 51421057 */
 
+/* fungsi ini nantinya akan dipanggil ketika user menginput nilai berupa 1, fungsi ini berguna untuk
+membuat dan menulis data file */
 void membuatfile(){
+	//mendeklarasikan variabel yang akan digunakan
     char   nama[20], npm[9], kelas[5], jurusan[20];
     string namaF   , namafile;
     char   charnama[20];
@@ -15,6 +18,7 @@ void membuatfile(){
     float  uts     ,     uas, hasil;
     FILE   *fileTemp;
 	
+	//perintah dimana user akan menginput nama file baru
 	printf("\nINPUTKAN !");
     printf("\nMASUKKAN NAMA FILE BARU        = ");
     fflush(stdin);
@@ -24,6 +28,7 @@ void membuatfile(){
 
     fileTemp = fopen(charnama, "w");
 
+	//perintah dimana user akan menginput data dari mahasiswa
     cout<<"MASUKKAN JUMLAH DATA MAHASISWA = ";
     cin>>ulangin;
     fprintf(fileTemp, "=================================================================================================================\n");
@@ -58,8 +63,10 @@ void membuatfile(){
     printf("---> DATA BERHASIL DIMASUKKAN & DISIMPAN PADA FILE !\n\n");
 }
 
-
+/* fungsi ini nantinya akan dipanggil ketika user menginput nilai berupa 2, fungsi ini berguna untuk
+membaca dan menampilkan data file */
 void membacafile(){
+	//mendeklarasikan variabel yang akan digunakan
     char nama[30], npm[30], kelas[5], jurusan[20];
     int  i = 1,ulangin;
     float uts, uas, hasil;
@@ -67,6 +74,7 @@ void membacafile(){
     char charnama[20];
     FILE *fileTemp;
 
+	//perintah dimana user diminta untuk menginput nama file yang akan dibaca dan ditampilkan
     printf("\nMASUKKAN NAMA FILE YANG INGIN DIBACA & DITAMPILKAN = ");
     fflush(stdin);
     getline(cin, namaF);
@@ -78,8 +86,10 @@ void membacafile(){
     printf("---> DATA BERHASIL DIBACA & DITAMPILKAN PADA FILE, SILAHKAN BUKA FILE !\n\n");
 }
 
-
+/* fungsi ini nantinya akan dipanggil ketika user menginput nilai berupa 3, fungsi ini berguna untuk
+menambahkan data file */
 void menambahkanfile(){
+	//mendeklarasikan variabel yang akan digunakan
 	char nama[30], npm[30], kelas[5], jurusan[20];
     int  i = 1,ulangin;
     float uts, uas, hasil;
@@ -87,6 +97,7 @@ void menambahkanfile(){
     char charnama[20];
     FILE *fileTemp;
 
+	//perintah dimana user diminta untuk menginput nama file yang datanya ingin ditambahkan
     printf("\nMASUKKAN NAMA FILE YANG INGIN DITAMBAHKAN DATA = ");
     fflush(stdin);
     getline(cin, namaF);
@@ -94,6 +105,8 @@ void menambahkanfile(){
     strcpy(charnama, namafile.c_str());
     
     fileTemp = fopen(charnama, "a");
+	
+	//perintah dimana user akan menginput data yang akan ditambahkan
     cout<<"MASUKKAN JUMLAH DATA MAHASISWA = ";
     cin>>ulangin;
     for (int i = 0; i < ulangin; i++){
@@ -125,8 +138,10 @@ void menambahkanfile(){
     printf("---> DATA BERHASIL DITAMBAHKAN !\n\n");
 }
 
-
+/* fungsi ini nantinya akan dipanggil ketika user menginput nilai berupa 4, fungsi ini berguna untuk
+memperbarui data file */
 void memperbaruifile(){
+	//mendeklarasikan variabel yang akan digunakan
 	char nama[30], npm[30], kelas[5], jurusan[20];
     int  i = 1,ulangin;
     float uts, uas, hasil;
@@ -134,6 +149,7 @@ void memperbaruifile(){
     char charnama[20];
     FILE *fileTemp;
 
+	//perintah dimama user diminta untuk menginput nama file yang akan diperbarui
     printf("\nMASUKKAN NAMA FILE YANG INGIN DIPERBARUI = ");
     fflush(stdin);
     getline(cin, namaF);
@@ -141,6 +157,8 @@ void memperbaruifile(){
     strcpy(charnama, namafile.c_str());
     
     fileTemp = fopen(charnama, "w");
+	
+	//perintah dimana user akan menginput data untuk diperbarui
     cout<<"MASUKKAN JUMLAH DATA MAHASISWA = ";
     cin>>ulangin;
     fprintf(fileTemp, "=================================================================================================================\n");
@@ -175,11 +193,15 @@ void memperbaruifile(){
     printf("---> DATA BERHASIL DIPERBARUI !\n\n");
 }
 
+/* fungsi ini nantinya akan dipanggil ketika user menginput nilai berupa 5, fungsi ini berguna untuk
+menghapus data file */
 void menghapusfile(){
+	//mendeklarasikan variabel yang akan digunakan
 	int ret;
 	FILE *fileTemp;
 	char filename[35];
 	
+	//perintah dimana user diminta untuk menginput nama file yang akan dihapus
 	printf("\nMASUKKAN NAMA FILE YANG INGIN DIHAPUS [namafile.txt] = ");
 	scanf("%s",filename); 
 	
@@ -197,7 +219,10 @@ void menghapusfile(){
 	}
 }
 
-
+/* main class atau fungsi utama dimana program akan dimulai dari fungsi ini terlebih dahulu.
+pada fungsi utama ini terdapat menu program yang menyediakan beberapa fungsi, yaitu:
+membuat dan menulis data file, membaca dan menampilkan data file, menambahkan, memperbarui dan
+menghapus file. */
 int main() {
     int pilihan;
     cout << "\nRIZKY - LUSSY - RIDWAN = 2IA25 - STRUKTURDATA"<<endl;
