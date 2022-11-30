@@ -3,6 +3,9 @@
 #include <cstring>
 #include <fstream>
 using namespace std;
+//ACHMAD RIZKY - 50421023
+//LUSSY TRIANA - 50421757
+//MUHAMMAD RIDWAN - 51421057
 
 void membuatfile(){
     char   nama[20], npm[9], kelas[5], jurusan[20];
